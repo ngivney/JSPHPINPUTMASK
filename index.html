@@ -1,12 +1,85 @@
-<?php
-echo "
-<table><tr>
+<script type="text/javascript">
+function myFunction15()
+{
+var x = document.getElementById('wphone1').value.length;
+var y = document.getElementById('wphone1').value;
+if (x>2 && y>0)
+  {
+// document.getElementById('next15hide').style.display = 'none';
+document.sform.wphone2.focus();
+  wphone1tog=1;
+  wphonebtn();
+}
+else{
+// document.getElementById('next15hide').style.display = 'block';
+document.getElementById('next15').disabled = true;
+  wphone1tog=0;
+  wphonebtn();
+}}
+
+function myFunction15_2()
+{
+var x = document.getElementById('wphone2').value.length;
+var y = document.getElementById('wphone2').value;
+if (x>2 && y>0)
+  {
+// document.getElementById('next15_2hide').style.display = 'none';
+document.sform.wphone3.focus();
+  wphone2tog=1;
+  wphonebtn();
+}
+else{
+// document.getElementById('next15_2hide').style.display = 'block';
+document.getElementById('next15').disabled = true;
+  wphone2tog=0;
+  wphonebtn();
+}}
+
+function myFunction15_3()
+{
+var x = document.getElementById('wphone3').value.length;
+var y = document.getElementById('wphone3').value;
+if (x>3 && y>0)
+  {
+// document.getElementById('next15_3hide').style.display = 'none';
+  wphone3tog=1;
+  wphonebtn();
+}
+else{
+// document.getElementById('next15_3hide').style.display = 'block';
+document.getElementById('next15').disabled = true;
+  wphone3tog=0;
+  wphonebtn();
+}}
+
+function wphonebtn()
+{
+var local = wphone1tog;
+var local = wphone2tog;
+var local = wphone3tog;
+
+wphonetog=wphone1tog+wphone2tog+wphone3tog;
+
+if (wphonetog>2){
+document.getElementById('next15').disabled = false;
+}
+}
+</script>
+
+<table>
+<tr><td>
+<form action='index.html' method='post' accept-charset='UTF-8' enctype='multipart/form-data' name='sform' id='sform'> 
+<p>JavaScript and PHP Input Mask Example</p>
+</td></tr>
+<tr>
 <td valign='top' nowrap='nowrap'><strong style='font-size:10pt;'>Work/Site Number<br /></strong> 
-&nbsp;<input style='width:28px;' id='wphone1' name='wphone1' type='text' class='single' maxlength='3' value='$wphone1' onkeyup='myFunction15()'/>
+&nbsp;<input style='width:30px;' id='wphone1' name='wphone1' type='text' class='single' maxlength='3' onkeyup='myFunction15()'/>
 <em>-</em>
-<input style='width:28px;' id='wphone2' name='wphone2' type='text' class='single' maxlength='3' value='$wphone2' onkeyup='myFunction15_2()'/>
+<input style='width:30px;' id='wphone2' name='wphone2' type='text' class='single' maxlength='3' onkeyup='myFunction15_2()'/>
 <em>-</em>
-<input style='width:36px;' id='wphone3' name='wphone3' type='text' class='single' maxlength='4' value='$wphone3' onkeyup='myFunction15_3()'/>
-</td></tr></table>
-";
-?>
+<input style='width:38px;' id='wphone3' name='wphone3' type='text' class='single' maxlength='4' onkeyup='myFunction15_3()'/>
+</td></tr>
+<tr><td>
+<input type='submit' value='Submit' id='next15' disabled ></form>
+</td></tr>
+</table>
