@@ -1,4 +1,5 @@
 <?php
+/* Check for post data and location */
 $URLhold = $_SERVER['HTTP_REFERER'];
 if ($_POST && $URLhold == "http://ngivney.comyr.com/github/jsphpinputmask/index.html" || $URLhold == "http://ngivney.comyr.com/github/jsphpinputmask/"){
 }
